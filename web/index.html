@@ -22,11 +22,11 @@
 	        MessengerExtensions.getContext('261210250600218',
 	                function success(thread_context){
 	                        var p = document.getElementById('abc');
-	        p.firstChild.nodeValue = 'DOne Loading success' + thread_context;
+	        p.firstChild.nodeValue = 'DOne Loading success' + JSON.stringify(thread_context);
 	                },
 	                function error(err){
 	                        var p = document.getElementById('abc');
-	        p.firstChild.nodeValue = 'DOne Loading error' + err;
+	        p.firstChild.nodeValue = 'DOne Loading error' + JSON.stringify(err);
 
 	    // error
 	}
