@@ -22,7 +22,7 @@
     	MessengerExtensions.getContext('12345', 
     		function success(thread_context){
     			var p = document.getElementById('abc');
-        p.firstChild.nodeValue = 'DOne Loading success' + abc2;
+        p.firstChild.nodeValue = 'DOne Loading success' + thread_context;
     		},
     		function error(err){
     			var p = document.getElementById('abc');
@@ -35,29 +35,11 @@
 
 <h1>Messenger Demo</h1>
 
-<div>
-	<p>The "Send to Messenger" plugin will trigger an authentication callback to your webhook.</p>
+<div id="abc2">
 
-	<div class="fb-send-to-messenger"
-	id="abc" 
-	messenger_app_id='APP_ID'
-	page_id='PAGE_ID'
-	data-ref="PASS_THROUGH_PARAM" 
-	color="blue" 
-	size="standard">
 </div>
-</div>
+<div id= "abc">
 
-<div>
-	<p>The "Message Us" plugin takes the user directly to Messenger and into a thread with your Page.</p>
-
-	<div class="fb-messengermessageus" 
-	id='abc2'
-	messenger_app_id='APP_ID'
-	page_id='PAGE_ID'
-	color="blue"
-	size="standard">
-</div>
 </div>
 
 </body>
