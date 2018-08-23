@@ -14,15 +14,19 @@
     		fjs.parentNode.insertBefore(js, fjs);
     	}(document, 'script', 'facebook-jssdk'));
     	window.extAsyncInit = function() {
-    		alert("swapnil");
+    		//alert("swapnil");
+    		var p = document.getElementById('abc2');
+        p.firstChild.nodeValue = 'DOne Loading';
     	};
 
     	MessengerExtensions.getContext('12345', 
     		function success(thread_context){
-    			alert('swuucess' + thread_context);
+    			var p = document.getElementById('abc');
+        p.firstChild.nodeValue = 'DOne Loading success' + abc2;
     		},
     		function error(err){
-    			alert('err' + err);
+    			var p = document.getElementById('abc');
+        p.firstChild.nodeValue = 'DOne Loading error' + err;
 
     // error
 }
@@ -34,7 +38,8 @@
 <div>
 	<p>The "Send to Messenger" plugin will trigger an authentication callback to your webhook.</p>
 
-	<div class="fb-send-to-messenger" 
+	<div class="fb-send-to-messenger"
+	id="abc" 
 	messenger_app_id='APP_ID'
 	page_id='PAGE_ID'
 	data-ref="PASS_THROUGH_PARAM" 
@@ -47,6 +52,7 @@
 	<p>The "Message Us" plugin takes the user directly to Messenger and into a thread with your Page.</p>
 
 	<div class="fb-messengermessageus" 
+	id='abc2'
 	messenger_app_id='APP_ID'
 	page_id='PAGE_ID'
 	color="blue"
