@@ -1,46 +1,48 @@
-<html>
-<head>
-	<title>Messenger Demo</title>
-</head>
-<body>
-	<script>
-    	//alert("swapnil2");
+	<html>
+	<head>
+	        <title>Messenger Demo</title>
+	</head>
+	<body>
+	        <script>
+	        //alert("swapnil2");
 
-    	(function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'Messenger'));
-    	window.extAsyncInit = function() {
-    		//alert("swapnil");
-    		var p = document.getElementById('abc2');
-        p.firstChild.nodeValue = 'DOne Loading';
-    	};
+	        (function(d, s, id){
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) {return;}
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'Messenger'));
+	        window.extAsyncInit = function() {
+	                //alert("swapnil");
+	                var p = document.getElementById('abc2');
+	        p.firstChild.nodeValue = 'DOne Loading';
+	        
 
-    	MessengerExtensions.getContext('261210250600218', 
-    		function success(thread_context){
-    			var p = document.getElementById('abc');
-        p.firstChild.nodeValue = 'DOne Loading success' + thread_context;
-    		},
-    		function error(err){
-    			var p = document.getElementById('abc');
-        p.firstChild.nodeValue = 'DOne Loading error' + err;
+	        MessengerExtensions.getContext('261210250600218',
+	                function success(thread_context){
+	                        var p = document.getElementById('abc');
+	        p.firstChild.nodeValue = 'DOne Loading success' + thread_context;
+	                },
+	                function error(err){
+	                        var p = document.getElementById('abc');
+	        p.firstChild.nodeValue = 'DOne Loading error' + err;
 
-    // error
-}
-);
-</script>
+	    // error
+	}
+	);
+	    };
+	</script>
 
-<h1>Messenger Demo</h1>
+	<h1>Messenger Demo</h1>
 
-<div id="abc2">
+	<div id="abc2">
 
-</div>
-<div id= "abc">
+	</div>
+	<div id= "abc">
 
-</div>
+	</div>
 
-</body>
-</html>
+	</body>
+	</html>
+		~              
