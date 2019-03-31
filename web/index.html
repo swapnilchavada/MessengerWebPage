@@ -4,34 +4,29 @@
 	</head>
 	<body>
 	        <script>
-	        //alert("swapnil2");
+	        <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
 
-	        (function(d, s, id){
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) {return;}
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.svcscm.sandcastle1489.frc2.facebook.net/en_US/messenger.Extensions.js";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'Messenger'));
-	        window.extAsyncInit = function() {
-	                //alert("swapnil");
-	                var p = document.getElementById('abc2');
-	        p.firstChild.nodeValue = 'DOne Loading';
-	        
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-	        MessengerExtensions.getContext('1678638095724206',
-	                function success(thread_context){
-	                        var p = document.getElementById('abc');
-	        p.firstChild.nodeValue = 'DOne Loading success' + JSON.stringify(thread_context);
-	                },
-	                function error(err){
-	                        var p = document.getElementById('abc');
-	        p.firstChild.nodeValue = 'DOne Loading error' + JSON.stringify(err);
-
-	    // error
-	}
-	);
-	    };
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="620697518375534">
+</div>
 	</script>
 
 	<h1>Messenger Demo</h1>
@@ -44,5 +39,4 @@
 	</div>
 
 	</body>
-	</html>
-		~              
+	</html>        
